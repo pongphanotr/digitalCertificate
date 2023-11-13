@@ -8,12 +8,12 @@
                 font-family: 'Sarabun';
             }
             table {
-                padding-left: 50px;
-                padding-top: 10px;
-                padding-bottom: 10px;
+                padding-left: 60px;
+                padding-top: 5px;
+                padding-bottom: 5px;
                 font-size: 100%;
                 font-family: 'Sarabun';
-                line-height: 35px;
+                line-height: 25px;
                 width: 100%;
             }
             /*body {
@@ -49,7 +49,7 @@
 
         <h1 style="font-size:24pt;text-align:center">Certificate of Calibration</h1>
         <div>
-            <table border="0" style="padding-top: 5px; padding-bottom: 0px;width:100%">
+            <table border="0" style="padding-top: 0px; padding-bottom: 0px;width:100%">
                 <xsl:for-each select="dcc:administrativeData">
                 <tr>
                     <th style="text-align:left;width:30%">Reference Number : </th>
@@ -82,7 +82,7 @@
                 </tr>
                 </xsl:for-each>
             </table>    
-            <table style="padding-top: 0px; padding-bottom: 0px; line-height: 35px;">
+            <table style="padding-top: 0px; padding-bottom: 0px; line-height: 25px;">
                 <xsl:for-each select="dcc:administrativeData">
                 <tr>
                     <th style="text-align:left">Model :</th>
@@ -121,18 +121,22 @@
                 </tr>
             </table>
             
-            <table style="line-height=0px">
+            <table border="0" style="line-height=0px">
                 <tr>
-                    <th style="padding-top: 70px;"></th>
+                    <th></th>
+                    <th style="padding-top: 200px;"></th>
                 </tr>
                 <tr>
+                    <td style="padding-right:60px"></td>
                     <td style="text-align:center;padding-bottom:0pt"><xsl:value-of select="dcc:administrativeData/dcc:authorized"/></td>
                 </tr> 
                 <tr>
+                    <td></td>
                     <th style="text-align: center;font-size:10pt;padding-top:0px">Head of Ionizing Radiation Metrology Section</th>
                 </tr>
             </table> 
             <!--xsl:text disable-output-escaping="yes">&lt;br/&gt;</xsl:text-->
+            <p style=";padding-buttom:100px"></p>
             <hr/>
 
             <xml:for-each select="/dcc:digitalCalibrationCertificate">
@@ -141,7 +145,7 @@
                     <li><xsl:value-of select="dcc:administrativeData/dcc:statementP2"/></li> 
                 </ol>
             </xml:for-each>
-            <p style="text-align:right;font-size:9pt">Page 1 of 2 Pages</p> 
+            <p style="text-align:right;font-size:9pt;padding-top:30px">Page 1 of 2 Pages</p> 
         </div> 
         
         <!--hr/>
@@ -188,31 +192,31 @@
             Continuation of Certificate of Calibration Number <xsl:for-each select="dcc:administrativeData"><xsl:value-of select="dcc:uniqueIdentifier"/></xsl:for-each>
         </p>
         <hr/>
-        <h3 stype="text-align:left">Details of Calibration</h3>
-        <table style="font-size:11pt;padding:5pt;line-height:16pt;width:100%">
+        <h4 stype="text-align:left;padding:0px">Details of Calibration</h4>
+        <table style="font-size:10pt;padding:0pt;line-height:14pt;width:100%">
             <xsl:for-each select="dcc:measurementResults">
             <tr>
-                <th style="text-align:left;width:32%">Environmental conditions:</th>
+                <th style="text-align:left;width:32%;vertical-align:top">Environmental conditions:</th>
                 <td style="text-align:left;font-size:10pt"><xsl:value-of select="dcc:influenceCondition"/></td>
             </tr>
             <tr>
-                <th style="text-align:left">Calibration Method:</th>
+                <th style="text-align:left;vertical-align:top">Calibration Method:</th>
                 <td style="text-align:left;font-size:10pt"><xsl:value-of select="dcc:measurementMethod"/></td>
             </tr>
             <tr>
-                <th style="text-align:left">Traceability:</th>
+                <th style="text-align:left;vertical-align:top">Traceability:</th>
                 <td style="text-align:left;font-size:10pt"><xsl:value-of select="dcc:traceability"/></td>
             </tr>
             </xsl:for-each>
         </table>
-        <h3 stype="text-align:left">Calibration Results</h3>
-        <table border="0" style="font-size:10pt;padding:0pt;line-height:16pt;width:100%">
+        <h4 stype="text-align:left">Calibration Results</h4>
+        <table border="0" style="font-size:9pt;padding:0pt;line-height:14pt;width:100%">
             <xsl:for-each select="dcc:measurementResults">
                 <tr>
                     <th>Radiation <br>quality</br></th> 
                     <th>Standard<sup>*</sup></th>
                     <th>UUC<sup>**</sup><br>Reading</br></th>
-                    <th>UUC<br>Adjustment</br></th>
+                    <th>UUC<p style="font-size:4pt">before</p> <p style="font-size:4pt">Adjustment</p></th>
                     <th>Unit</th>
                     <th>Range</th>
                     <th>Calibration<br>Factor</br></th>
@@ -287,16 +291,19 @@
 
             </xsl:for-each>
         </table>
-
+        
         <sub style="text-align:left;font-size:8pt">
         <xsl:for-each select="dcc:measurementResults"><xsl:value-of select="dcc:statementP3"/></xsl:for-each></sub>
         <br/>
         <sub style="text-align:left;font-size:8pt">
         <xsl:for-each select="dcc:measurementResults"><xsl:value-of select="dcc:statementP4"/></xsl:for-each></sub>
 
-        <p style="text-align:left;font-size:10pt"><b>Explaination : </b>
+        <p style="text-align:left;font-size:10pt;padding-bottom:0px;line-height:16pt"><b>Explaination : </b>
         <xsl:for-each select="dcc:measurementResults"><xsl:value-of select="dcc:measurementOfLength"/></xsl:for-each></p>
-        <p style="text-align:left;font-size:10pt"><b>Uncertainties of Calibration : </b>
+        <p style="line-height:16pt;text-align:left;font-size:10pt;margin-top:-10px;padding-right:0px;text-indent:80px">
+        <xsl:for-each select="dcc:measurementResults"><xsl:value-of select="dcc:statementP7"/></xsl:for-each></p>
+
+        <p style="text-align:left;font-size:10pt;line-height:16pt"><b>Uncertainties of Calibration : </b>
         <xsl:for-each select="dcc:measurementResults"><xsl:value-of select="dcc:uncertainty"/></xsl:for-each></p>
 
         <table border="0" style="font-size:11pt;padding:0pt;line-height:16pt;width:100%">
@@ -318,7 +325,10 @@
             </tr>
           
         </table>
-
+        <p style="text-align:left;font-size:10pt;line-height:16pt">
+        <xsl:for-each select="dcc:measurementResults"><xsl:value-of select="dcc:statementP5"/></xsl:for-each></p>
+        <p style="text-align:center;font-size:10pt;line-height:16pt">
+            <xsl:for-each select="dcc:measurementResults"><xsl:value-of select="dcc:statementP6"/></xsl:for-each></p>
         <table style="line-height=0px">
             <tr>
                 <th style="padding-top: 20px;"></th>
