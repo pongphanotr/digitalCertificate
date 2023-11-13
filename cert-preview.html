@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:dcc="administrativeData" xmlns:si="measurementResults">
+  <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <style>
+            body{
+                font-family: 'Sarabun';
+            }
+            table {
+                padding-left: 50px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 100%;
+                font-family: 'Sarabun';
+                line-height: 35px;
+                width: 100%;
+            }
+            /*body {
+                background-image: url('certificate.png');
+                background-repeat: no-repeat;
+            }*/
+
+            header {
+                padding: 80px;
+            }
+            .img-container {
+                width: 100%;
+                height: 200px;
+                max-height: 240px;
+                overflow: hidden;
+                margin: 0;
+                position: relative;
+            }
+
+            .img-container img {
+                position:absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 100%;
+            }
+        </style>
+    <body>
+      <br />
+      <header></header>
+      <h1 style="font-size:24pt;text-align:center">Certificate of Calibration</h1>
+      <div>
+        <table border="0" style="padding-top: 5px; padding-bottom: 0px;width:100%">
+          <tr>
+            <th style="text-align:left;width:30%">Reference Number : </th>
+            <td style="text-align:left">SM-001/2023</td>
+          </tr>
+          <tr>
+            <th style="text-align:left">Instutition :</th>
+            <td style="text-align:left">xx</td>
+          </tr>
+          <tr>
+            <th style="text-align: left">Address :</th>
+            <td style="text-align:left">xx</td>
+          </tr>
+          <tr>
+            <th style="text-align:left">Commitment Date :</th>
+            <td>10 January 1900</td>
+          </tr>
+          <tr>
+            <th style="text-align:left">Calibration Date :</th>
+            <td>18 October 2023</td>
+          </tr>
+        </table>
+        <table style="padding-top: 0px; padding-bottom: 0px; line-height: 35px;">
+          <tr>
+            <th style="text-align:left">Model :</th>
+            <td>3500</td>
+            <th style="text-align:left">S/N :</th>
+            <td>3125</td>
+            <th style="text-align:left">Manuf. :</th>
+            <td>Dosimeter Corporation</td>
+          </tr>
+        </table>
+        <table border="0" style="padding-top:0px;width:100%">
+          <tr>
+            <th style="text-align:left;width:30%">Description :</th>
+            <td style="text-align:left">Radiation Monitor</td>
+          </tr>
+          <tr>
+            <th style="text-align:left">Reference :</th>
+            <td style="text-align:left">SM2023101801</td>
+          </tr>
+          <tr>
+            <th style="text-align:left;">Issue Date :</th>
+            <td style="text-align:left">04 November 2023</td>
+          </tr>
+          <tr>
+            <th style="text-align: left;">Approved By :</th>
+          </tr>
+        </table>
+        <table style="line-height=0px">
+          <tr>
+            <th style="padding-top: 70px;"></th>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding-bottom:0pt">Vithit Pungkun</td>
+          </tr>
+          <tr>
+            <th style="text-align: center;font-size:10pt;padding-top:0px">Head of Ionizing Radiation Metrology Section</th>
+          </tr>
+        </table>
+        <hr />
+        <xml:for-each select="/dcc:digitalCalibrationCertificate">
+          <ol style="text-align:left;font-size:10pt;color:darkblue;padding-buttom=1pt">
+            <li>The reported measurement result relates only to the measurand and applies only at the time of measurement.</li>
+            <li>This calibration certificate may not be reproduced other than in full except with the permission of the  Ionizing Radiation Metrology Laboratory, OAP.</li>
+          </ol>
+        </xml:for-each>
+        <p style="text-align:right;font-size:9pt">Page 1 of 2 Pages</p>
+      </div>
+      <div style="break-after:page"></div>
+      <p style="padding:45px"></p>
+      <p style="text-align:right">
+            Continuation of Certificate of Calibration Number SM-001/2023</p>
+      <hr />
+      <h3 stype="text-align:left">Details of Calibration</h3>
+      <table style="font-size:11pt;padding:5pt;line-height:16pt;width:100%">
+        <tr>
+          <th style="text-align:left;width:32%">Environmental conditions:</th>
+          <td style="text-align:left;font-size:10pt">The measurement was carried out in an ambient temperature of 
+(20.0 &#177; 2) &#730;C, air pressure (96.0 &#177;10) kPa and relative humidity  (55 &#177; 20) %</td>
+        </tr>
+        <tr>
+          <th style="text-align:left">Calibration Method:</th>
+          <td style="text-align:left;font-size:10pt">Calibration in a known radiation field. The reference air kerma rates are from collimated beams of Cobalt - 60 and Caesium - 137 irradiators.</td>
+        </tr>
+        <tr>
+          <th style="text-align:left">Traceability:</th>
+          <td style="text-align:left;font-size:10pt">The calibration is traceable to the National Metrology Institute of Japan (NMIJ), through Certificate Reference No. 212020.</td>
+        </tr>
+      </table>
+      <h3 stype="text-align:left">Calibration Results</h3>
+      <table border="0" style="font-size:10pt;padding:0pt;line-height:16pt;width:100%">
+        <tr>
+          <th>Radiation <br>quality</br></th>
+          <th>Standard<sup>*</sup></th>
+          <th>UUC<sup>**</sup><br>Reading</br></th>
+          <th>UUC<br>Adjustment</br></th>
+          <th>Unit</th>
+          <th>Range</th>
+          <th>Calibration<br>Factor</br></th>
+          <th>U(%)</th>
+        </tr>
+        <tr>
+          <td style="text-align:center"><hr />Cs-137<br />Cs-137<br />Cs-137<br /></td>
+          <td style="text-align:center"><hr />1.55<br />36.0<br />148.0<br /></td>
+          <td style="text-align:center"><hr />1<br />10<br />100<br /></td>
+          <td style="text-align:center"><hr />1.22<br />13.4<br />134.0<br /></td>
+          <td style="text-align:center"><hr />1.22<br />13.4<br />134.0<br /></td>
+          <td style="text-align:center"><hr />mSv/h<br />mR/h<br />mR/h<br /></td>
+          <td style="text-align:center"><hr />12<br />8<br />7<br /></td>
+          <td style="text-align:center"><hr />1.27<br />2.69<br />1.1<br /></td>
+        </tr>
+      </table>
+      <sub style="text-align:left;font-size:8pt">*The reference condition of the calibration coefficient stated 293.15 K of temperature and 101.325 kPa of pressure.</sub>
+      <br />
+      <sub style="text-align:left;font-size:8pt">** UUC = Unit Under Calibration</sub>
+      <p style="text-align:left;font-size:10pt"><b>Explaination : </b>The UUC reading is averaged from the readings without adjustment, unless UUC before adjustment is reported. The calibration factor (C.F.) is defined as the standard of the quantity that the instrument is intended to measure divided by the UUC reading given by the instrument. To achieve more accuracy, C.F. shall be applied using the equation; result = C.F. x UUC reading.
+The conversion coefficient of R to Gy is 8.76 mGy/R (ref. ICRU Report 47 p.23.). The conversion coefficient of Gy to Sv is 1.21 Sv/Gy for Cs-137 and 1.16 Sv/Gy for Co-60  (ref. ISO 4037-3 p.26).</p>
+      <p style="text-align:left;font-size:10pt"><b>Uncertainties of Calibration : </b>The stated uncertainty is the expanded uncertainty which obtains multiplying of the standard uncertainty and the coverage factor k=2 at approximately 95% confidence. It has been determined in accordance with Guide to the Expression of Uncertainty in Measurement - JCGM 100: 2008.</p>
+      <table border="0" style="font-size:11pt;padding:0pt;line-height:16pt;width:100%">
+        <tr>
+          <th style="padding-top:30px;"></th>
+        </tr>
+        <tr>
+          <td style="text-align:center;padding:0pt">Calibrated by</td>
+          <td></td>
+          <td style="text-align:center;padding:0pt">Verified by</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="text-align:center;padding:0pt">(Leeda Mitrayon)</td>
+          <td></td>
+          <td style="text-align:center;padding:0pt">(Pongphanot Rindhatayathon)</td>
+        </tr>
+      </table>
+      <table style="line-height=0px">
+        <tr>
+          <th style="padding-top: 20px;"></th>
+        </tr>
+      </table>
+      <p style="text-align:right;font-size:9pt">Page 2 of 2 Pages</p>
+    </body>
+  </link>
+</html>
+
+
